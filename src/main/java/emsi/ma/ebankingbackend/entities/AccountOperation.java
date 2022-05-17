@@ -1,22 +1,25 @@
-package org.emsi.jee.ebankingbackend.entities;
+package emsi.ma.ebankingbackend.entities;
 
+import emsi.ma.ebankingbackend.enums.OperationType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.emsi.jee.ebankingbackend.enums.OperationType;
 
 import javax.persistence.*;
 import java.util.Date;
-@Data@NoArgsConstructor@AllArgsConstructor@Entity
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
 public class AccountOperation {
-@Id@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id  @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date operationDate;
     private double amount;
     @Enumerated(EnumType.STRING)
     private OperationType type;
-@ManyToOne
+    @ManyToOne
     private BankAccount bankAccount;
-private String description;
-
+    private String description;
 }

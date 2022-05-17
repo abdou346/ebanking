@@ -1,4 +1,4 @@
-package org.emsi.jee.ebankingbackend.entities;
+package emsi.ma.ebankingbackend.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,10 +7,11 @@ import lombok.NoArgsConstructor;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @DiscriminatorValue("CA")
-@Data@AllArgsConstructor@NoArgsConstructor
 public class CurrentAccount extends BankAccount{
     private double overDraft;
-
 }

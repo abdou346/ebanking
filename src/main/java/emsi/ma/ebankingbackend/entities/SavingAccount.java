@@ -1,4 +1,4 @@
-package org.emsi.jee.ebankingbackend.entities;
+package emsi.ma.ebankingbackend.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
-@Data@AllArgsConstructor@NoArgsConstructor
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @DiscriminatorValue("SA")
 public class SavingAccount extends BankAccount{
